@@ -52,16 +52,19 @@ const HeroBanner = () => {
     const imageTransition = useTransition(recipe, {
         from: { x: -100, y: 0, opacity: 0 },
         enter: { x: 0, y: 0, opacity: 1 },
+        delay: 300
     });
 
     const titleTransition = useTransition(recipe, {
         from: { x: 0, y: 100, opacity: 0 },
         enter: { x: 0, y: 0, opacity: 1 },
+        delay: 300
     });
 
     const descTransition = useTransition(recipe, {
         from: { x: 0, y: 100, opacity: 0 },
         enter: { x: 0, y: 0, opacity: 1 },
+        delay: 300
     });
 
     return (
