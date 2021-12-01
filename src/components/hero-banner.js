@@ -36,6 +36,11 @@ const HeroBanner = () => {
                     gatsbyImageData(layout: FIXED, width: 1250, height: 1250)
                 }
             }
+            food2: file(relativePath: { eq: "fancy-food-2.png" }) {
+                childImageSharp {
+                    gatsbyImageData(layout: FIXED, width: 1250, height: 1250)
+                }
+            }
         }
     `)
 
@@ -63,6 +68,15 @@ const HeroBanner = () => {
         delay: 500
     });
 
+    var currImage = null;
+    if (counter == 0) {
+        currImage = data.food1.childImageSharp.gatsbyImageData
+    } else if (counter == 1) {
+        currImage = data.food2.childImageSharp.gatsbyImageData
+    } else {
+        currImage = data.food2.childImageSharp.gatsbyImageData
+    }
+
     return (
         <div className="container">
             <div className="featured-recipe">
@@ -70,7 +84,7 @@ const HeroBanner = () => {
                     {imageTransition((style, recipe) => 
                         recipe ? 
                         <animated.div style={style}> 
-                            <GatsbyImage image={data.food1.childImageSharp.gatsbyImageData} alt="tiktok" />
+                            <GatsbyImage image={currImage} alt="tiktok" />
                         </animated.div>: ''    
                     )}
                     <div className="inner-recipe-words">
