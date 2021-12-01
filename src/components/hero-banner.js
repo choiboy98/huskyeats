@@ -46,7 +46,7 @@ const HeroBanner = () => {
     useInterval(() => {
         counter = (counter + 1) % 3;
         updateRecipe(recipes[counter])
-    }, 5000)
+    }, 10000)
     
     const [recipe, updateRecipe] = useState(recipes[counter]);
     const imageTransition = useTransition(recipe, {
@@ -64,7 +64,7 @@ const HeroBanner = () => {
     const descTransition = useTransition(recipe, {
         from: { x: 0, y: 100, opacity: 0 },
         enter: { x: 0, y: 0, opacity: 1 },
-        delay: 300
+        delay: 500
     });
 
     return (
@@ -77,18 +77,20 @@ const HeroBanner = () => {
                             <Img fixed={data.img.childImageSharp.fixed} />
                         </animated.div>: ''    
                     )}
-                    {titleTransition((style, recipe) => 
-                        recipe ? 
-                        <animated.div style={style}> 
-                            <h1>{recipe.name}</h1>
-                        </animated.div>: ''  
-                    )}
-                    {descTransition((style, recipe) => 
-                        recipe ? 
-                        <animated.div style={style}> 
-                            <h2>{recipe.desc}</h2>
-                        </animated.div>: ''  
-                    )}
+                    <div className="inner-recipe-words">
+                        {titleTransition((style, recipe) => 
+                            recipe ? 
+                            <animated.div style={style}> 
+                                <h1>{recipe.name}</h1>
+                            </animated.div>: ''  
+                        )}
+                        {descTransition((style, recipe) => 
+                            recipe ? 
+                            <animated.div style={style}> 
+                                <h2>{recipe.desc}</h2>
+                            </animated.div>: ''  
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
