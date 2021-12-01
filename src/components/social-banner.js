@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export const horizontalLogoImage = graphql`
     fragment horizontalLogoImage on File {
         childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 125, height: 89)
+            gatsbyImageData(layout: FIXED, width: 63, height: 45)
         }
     }
 `
@@ -21,7 +21,7 @@ export const squareLogoImage = graphql`
 const SocialBanner = () => {
     const data = useStaticQuery(graphql`
         query {
-            youtube: file(relativePath: { eq: "youtube-logo.png" }) {
+            youtube: file(relativePath: { eq: "bw-youtube-logo.png" }) {
                 ...horizontalLogoImage
             }
 

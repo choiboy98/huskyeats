@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import { useTransition, animated } from 'react-spring';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import recipes from '../recipes/featured-recipes/index';
 
@@ -31,13 +31,9 @@ function useInterval(callback, delay) {
 const HeroBanner = () => {
     const data = useStaticQuery(graphql`
         query {
-            img: file(relativePath: { eq: "icon.png" }) {
+            food1: file(relativePath: { eq: "fancy-food.png" }) {
                 childImageSharp {
-                    # Specify the image processing specifications right in the query.
-                    # Makes it trivial to update as your page's design changes.
-                    fixed(width: 600, height: 600) {
-                        ...GatsbyImageSharpFixed
-                    }
+                    gatsbyImageData(layout: FIXED, width: 1250, height: 1250)
                 }
             }
         }
@@ -74,7 +70,7 @@ const HeroBanner = () => {
                     {imageTransition((style, recipe) => 
                         recipe ? 
                         <animated.div style={style}> 
-                            <Img fixed={data.img.childImageSharp.fixed} />
+                            <GatsbyImage image={data.food1.childImageSharp.gatsbyImageData} alt="tiktok" />
                         </animated.div>: ''    
                     )}
                     <div className="inner-recipe-words">
