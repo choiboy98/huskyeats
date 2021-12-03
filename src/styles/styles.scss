@@ -145,3 +145,46 @@ header {
     min-width: 360px;
   }
 }
+
+// Journal
+.journal-banner {
+  display: flex;
+  position: relative;
+  top: 240px;
+  
+  .featured-journal {
+    z-index: 5;
+    display: flex;
+
+    .journal-words {
+      position: absolute;
+      margin-bottom: 30rem;
+      z-index: 10;
+      text-decoration: none;
+      letter-spacing: 1.75px;
+      text-transform: uppercase;
+      margin-left: 25rem;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      
+      h2 {        
+        font-size: 4rem;
+        color: $black;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: 1rem;
+        color: $maroon;
+      }
+    }
+  }
+}
+
+.vertical-writing {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-decoration: none;
+  letter-spacing: 50px;
+  text-transform: uppercase;
+  font-size: 5rem;
+}

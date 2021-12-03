@@ -84,7 +84,7 @@ const HeroBanner = () => {
                     {imageTransition((style, recipe) => 
                         recipe ? 
                         <animated.div style={style}> 
-                            <GatsbyImage image={currImage} alt="tiktok" />
+                            <GatsbyImage image={currImage} alt="image" />
                         </animated.div>: ''    
                     )}
                     <div className="inner-recipe-words">
