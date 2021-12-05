@@ -5198,7 +5198,7 @@ const HeroBanner = () => {
     style: style
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.GatsbyImage, {
     image: currImage,
-    alt: "tiktok"
+    alt: "image"
   })) : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "inner-recipe-words"
   }, titleTransition((style, recipe) => recipe ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_spring__WEBPACK_IMPORTED_MODULE_3__.animated.div, {
@@ -5209,6 +5209,60 @@ const HeroBanner = () => {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroBanner);
+
+/***/ }),
+
+/***/ "./src/components/journal-banner.js":
+/*!******************************************!*\
+  !*** ./src/components/journal-banner.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _public_page_data_sq_d_2967257422_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/2967257422.json */ "./public/page-data/sq/d/2967257422.json");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var react_spring__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spring */ "./node_modules/react-spring/dist/react-spring.esm.js");
+/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
+/* harmony import */ var _journals_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../journals/index */ "./src/journals/index.js");
+
+
+
+
+
+
+var MAX_JOURNALS = 3;
+const verticalImage = "217919100";
+
+const JournalBanner = () => {
+  const data = _public_page_data_sq_d_2967257422_json__WEBPACK_IMPORTED_MODULE_0__.data;
+  console.log(_journals_index__WEBPACK_IMPORTED_MODULE_4__["default"][0]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "journal-banner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", {
+    className: "vertical-writing"
+  }, "Journals"), _journals_index__WEBPACK_IMPORTED_MODULE_4__["default"].map((journal, index) => {
+    if (index < MAX_JOURNALS) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+        class: "column"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+        class: "card"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.GatsbyImage, {
+        image: journal.useImages().data.yuzuThumbnail.childImageSharp.gatsbyImageData,
+        alt: "image"
+      })));
+    }
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (JournalBanner);
 
 /***/ }),
 
@@ -5266,6 +5320,128 @@ const SocialBanner = () => {
 
 /***/ }),
 
+/***/ "./src/journals/index.js":
+/*!*******************************!*\
+  !*** ./src/journals/index.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _journal_1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./journal-1 */ "./src/journals/journal-1.js");
+/* harmony import */ var _journal_2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./journal-2 */ "./src/journals/journal-2.js");
+/* harmony import */ var _journal_3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./journal-3 */ "./src/journals/journal-3.js");
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+const journals = [_objectSpread({}, _journal_1__WEBPACK_IMPORTED_MODULE_1__["default"]), _objectSpread({}, _journal_2__WEBPACK_IMPORTED_MODULE_2__["default"]), _objectSpread({}, _journal_3__WEBPACK_IMPORTED_MODULE_3__["default"])];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (journals);
+
+/***/ }),
+
+/***/ "./src/journals/journal-1.js":
+/*!***********************************!*\
+  !*** ./src/journals/journal-1.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _public_page_data_sq_d_3164758500_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/3164758500.json */ "./public/page-data/sq/d/3164758500.json");
+
+const name = "yuzu drink";
+const summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+const link = "/recipe/cookie";
+const verticalImage = "217919100";
+
+const useImages = () => {
+  const data = _public_page_data_sq_d_3164758500_json__WEBPACK_IMPORTED_MODULE_0__.data;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name,
+  summary,
+  link,
+  useImages
+});
+
+/***/ }),
+
+/***/ "./src/journals/journal-2.js":
+/*!***********************************!*\
+  !*** ./src/journals/journal-2.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _public_page_data_sq_d_2967257422_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/2967257422.json */ "./public/page-data/sq/d/2967257422.json");
+
+const name = "tree";
+const desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+const link = "/recipe/tree";
+const verticalImage = "217919100";
+
+const useImages = () => {
+  const data = _public_page_data_sq_d_2967257422_json__WEBPACK_IMPORTED_MODULE_0__.data;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name,
+  desc,
+  link,
+  useImages
+});
+
+/***/ }),
+
+/***/ "./src/journals/journal-3.js":
+/*!***********************************!*\
+  !*** ./src/journals/journal-3.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _public_page_data_sq_d_2967257422_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/2967257422.json */ "./public/page-data/sq/d/2967257422.json");
+
+const name = "ornament";
+const desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+const link = "/recipe/ornament";
+const verticalImage = "217919100";
+
+const useImages = () => {
+  const data = _public_page_data_sq_d_2967257422_json__WEBPACK_IMPORTED_MODULE_0__.data;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name,
+  desc,
+  link,
+  useImages
+});
+
+/***/ }),
+
 /***/ "./src/pages/index.js":
 /*!****************************!*\
   !*** ./src/pages/index.js ***!
@@ -5284,6 +5460,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/header */ "./src/components/header.js");
 /* harmony import */ var _components_hero_banner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/hero-banner */ "./src/components/hero-banner.js");
 /* harmony import */ var _components_social_banner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/social-banner */ "./src/components/social-banner.js");
+/* harmony import */ var _components_journal_banner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/journal-banner */ "./src/components/journal-banner.js");
+
 
 
 
@@ -5291,7 +5469,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const IndexPage = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_hero_banner__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_social_banner__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_hero_banner__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_social_banner__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_journal_banner__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 }; // Step 3: Export your component
 
 
@@ -32788,6 +32966,28 @@ if (false) {} else {
 
 "use strict";
 module.exports = JSON.parse('{"data":{"youtube":{"childImageSharp":{"gatsbyImageData":{"layout":"fixed","backgroundColor":"#080808","images":{"fallback":{"src":"/static/2f3ac89880dc8b4be2bb5e325989bc04/9ac36/bw-youtube-logo.png","srcSet":"/static/2f3ac89880dc8b4be2bb5e325989bc04/9ac36/bw-youtube-logo.png 63w,\\n/static/2f3ac89880dc8b4be2bb5e325989bc04/7a94b/bw-youtube-logo.png 126w","sizes":"63px"},"sources":[{"srcSet":"/static/2f3ac89880dc8b4be2bb5e325989bc04/32a6c/bw-youtube-logo.webp 63w,\\n/static/2f3ac89880dc8b4be2bb5e325989bc04/f0c21/bw-youtube-logo.webp 126w","type":"image/webp","sizes":"63px"}]},"width":63,"height":45}}},"instagram":{"childImageSharp":{"gatsbyImageData":{"layout":"fixed","backgroundColor":"#080808","images":{"fallback":{"src":"/static/2a6337cd1a8160ec02fa304ec7742fc5/e9fba/bw-instagram-logo.png","srcSet":"/static/2a6337cd1a8160ec02fa304ec7742fc5/e9fba/bw-instagram-logo.png 50w,\\n/static/2a6337cd1a8160ec02fa304ec7742fc5/15e42/bw-instagram-logo.png 100w","sizes":"50px"},"sources":[{"srcSet":"/static/2a6337cd1a8160ec02fa304ec7742fc5/dbc4a/bw-instagram-logo.webp 50w,\\n/static/2a6337cd1a8160ec02fa304ec7742fc5/d8057/bw-instagram-logo.webp 100w","type":"image/webp","sizes":"50px"}]},"width":50,"height":50}}},"tiktok":{"childImageSharp":{"gatsbyImageData":{"layout":"fixed","backgroundColor":"#080808","images":{"fallback":{"src":"/static/57b896ced910e21a745a12384eb36c65/e9fba/bw-tiktok-logo.png","srcSet":"/static/57b896ced910e21a745a12384eb36c65/e9fba/bw-tiktok-logo.png 50w,\\n/static/57b896ced910e21a745a12384eb36c65/15e42/bw-tiktok-logo.png 100w","sizes":"50px"},"sources":[{"srcSet":"/static/57b896ced910e21a745a12384eb36c65/dbc4a/bw-tiktok-logo.webp 50w,\\n/static/57b896ced910e21a745a12384eb36c65/d8057/bw-tiktok-logo.webp 100w","type":"image/webp","sizes":"50px"}]},"width":50,"height":50}}}}}');
+
+/***/ }),
+
+/***/ "./public/page-data/sq/d/2967257422.json":
+/*!***********************************************!*\
+  !*** ./public/page-data/sq/d/2967257422.json ***!
+  \***********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"data":{"yuzuThumbnail":{"childImageSharp":{"gatsbyImageData":{"layout":"fixed","backgroundColor":"#080808","images":{"fallback":{"src":"/static/3430c0185cf4e0c7e799ff431a87406f/293e5/yuzu-drink.jpg","srcSet":"/static/3430c0185cf4e0c7e799ff431a87406f/293e5/yuzu-drink.jpg 150w,\\n/static/3430c0185cf4e0c7e799ff431a87406f/a0d17/yuzu-drink.jpg 300w","sizes":"150px"},"sources":[{"srcSet":"/static/3430c0185cf4e0c7e799ff431a87406f/445ab/yuzu-drink.webp 150w,\\n/static/3430c0185cf4e0c7e799ff431a87406f/85424/yuzu-drink.webp 300w","type":"image/webp","sizes":"150px"}]},"width":150,"height":300}}}}}');
+
+/***/ }),
+
+/***/ "./public/page-data/sq/d/3164758500.json":
+/*!***********************************************!*\
+  !*** ./public/page-data/sq/d/3164758500.json ***!
+  \***********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"data":{"yuzuThumbnail":{"childImageSharp":{"gatsbyImageData":{"layout":"fixed","backgroundColor":"#080808","images":{"fallback":{"src":"/static/3430c0185cf4e0c7e799ff431a87406f/293e5/yuzu-drink.jpg","srcSet":"/static/3430c0185cf4e0c7e799ff431a87406f/293e5/yuzu-drink.jpg 150w,\\n/static/3430c0185cf4e0c7e799ff431a87406f/a0d17/yuzu-drink.jpg 300w","sizes":"150px"},"sources":[{"srcSet":"/static/3430c0185cf4e0c7e799ff431a87406f/445ab/yuzu-drink.webp 150w,\\n/static/3430c0185cf4e0c7e799ff431a87406f/85424/yuzu-drink.webp 300w","type":"image/webp","sizes":"150px"}]},"width":150,"height":300}}}}}');
 
 /***/ }),
 
